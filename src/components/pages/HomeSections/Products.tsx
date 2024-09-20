@@ -1,7 +1,12 @@
+"use client";
 import Image from "next/image";
 import scss from "./Products.module.scss";
 import coffe from "@/assets/image/coffe.svg";
+import { useGetProductQuery } from "@/redux/api/todo";
+import { useEffect } from "react";
 const Products = () => {
+  const { data } = useGetProductQuery();
+  console.log(data);
   return (
     <section id={scss.Products}>
       <div className="container">
@@ -18,23 +23,23 @@ const Products = () => {
           </p>
         </div>
         <div className={scss.cards}>
-          <div className={scss.card}>
-            <div className={scss.card_bals}>
-              <div className={scss.bals_img}>
-                <Image src={coffe} alt="img" />
+            <div className={scss.card}>
+              <div className={scss.card_bals}>
+                <div className={scss.bals_img}>
+                  <Image src={coffe} alt="img" />
+                </div>
+              </div>
+              <div className={scss.coffe_text}>
+                <h2>Fast</h2>
+                <p>
+                  Our cafe will serve <br /> you quickly
+                </p>
+                <h4>
+                  800$ <span>330 ml</span>
+                </h4>
+                <button>Buy Product</button>
               </div>
             </div>
-            <div className={scss.coffe_text}>
-              <h2>Fast</h2>
-              <p>
-                Our cafe will serve <br /> you quickly
-              </p>
-              <h4>
-                7,45$ <span>330 ml</span>
-              </h4>
-              <button>Buy Product</button>
-            </div>
-          </div>
         </div>
       </div>
     </section>

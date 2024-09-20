@@ -2,15 +2,30 @@ import { api as index } from "..";
 
 const api = index.injectEndpoints({
   endpoints: (build) => ({
-    AddTodo: build.mutation({
-      query: (data) => ({
+    getProduct: build.query<TODO.GetResponse, TODO.GetRequest>({
+      query: () => ({
         url: "/",
-        mothod: "POST",
-        body: data,
+        method: "GET",
+      }),
+      providesTags: ["todo"],
+    }),
+    addProduct: build.mutation({
+      query: (newData) => ({
+        url: "/a77de43fedc2201e94dc1d85d8808f45/todo_star",
+        method: "POST",
+        body: newData,
+      }),
+      invalidatesTags: ["todo"],
+    }),
+    addFileProduct: build.mutation({
+      query: (newData) => ({
+        url: "/upload/file",
+        method: "POST",
+        body: newData,
       }),
       invalidatesTags: ["todo"],
     }),
   }),
 });
 
-export const { useAddTodoMutation } = api;
+export const { useAddProductMutation, useGetProductQuery , useAddFileProductMutation} = api;
