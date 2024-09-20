@@ -1,0 +1,66 @@
+#Make {
+  padding: 150px 0;
+  .Make {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    .block {
+      width: 465px;
+      height: 684px;
+      background: #237249;
+      position: relative;
+      .images {
+        position: absolute;
+        top: -90px;
+        .logo {
+          position: absolute;
+          right: 0;
+          top: 0;
+        }
+      }
+    }
+    .Make_text {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px;
+      h1 {
+        font-size: 80px;
+        font-weight: 800;
+        line-height: 87.58px;
+        span {
+          color: #237249;
+        }
+      }
+      p {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 32.69px;
+        color: #d9d9d9;
+      }
+      .Make_text_block {
+        position: relative;
+        .Make_text_buttons {
+          position: absolute;
+          top: 50%;
+          right: 30%;
+          button {
+            padding: 10px 30px;
+            background: linear-gradient(
+              265.23deg,
+              #237249 6.79%,
+              #35c66b 97.2%
+            );
+            color: white;
+            font-size: 20px;
+            border: none;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+          }
+        }
+      }
+    }
+  }
+}

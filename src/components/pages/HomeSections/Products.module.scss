@@ -1,0 +1,94 @@
+#Products {
+  padding: 100px 0;
+  .Products {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    h1 {
+      font-size: 80px;
+      font-weight: 800;
+      line-height: 87.58px;
+      letter-spacing: -0.03em;
+
+      span {
+        font-size: 80px;
+        font-weight: 800;
+        line-height: 87.58px;
+        letter-spacing: -0.03em;
+        color: #237249;
+        text-shadow: 10px 10px 30px #84e3b2;
+      }
+    }
+    p {
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 32.69px;
+      letter-spacing: -0.02em;
+      color: #d9d9d9;
+    }
+  }
+  .cards {
+    padding: 50px 0;
+    .card {
+      width: 277px;
+      height: 554px;
+      border: 2px solid grey;
+      background: 0;
+      border-radius: 15px;
+      .card_bals {
+        width: 186px;
+        height: 186px;
+        position: relative;
+        background: linear-gradient(267.2deg, #237249 3.05%, #35c66b 75.72%);
+        margin: 60px 40px 0;
+        border-radius: 50%;
+        .bals_img {
+          position: absolute;
+          top: -50%;
+          left: -30%;
+        }
+      }
+      .coffe_text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 40px 0;
+        text-align: center;
+        gap: 15px;
+        h2 {
+          font-size: 32px;
+          font-weight: 500;
+          letter-spacing: -0.02em;
+          color: white;
+        }
+        p {
+          font-size: 20.13px;
+          font-weight: 400;
+          line-height: 32.91px;
+          letter-spacing: -0.02em;
+        }
+        h4 {
+          display: flex;
+          align-items: center;
+          gap: 30px;
+          font-size: 32px;
+          font-weight: 500;
+          span {
+            font-size: 20.13px;
+            font-weight: 400;
+          }
+        }
+        button {
+          width: 186px;
+          height: 54.07px;
+          border-radius: 20px;
+          font-size: 17.3px;
+          font-weight: 639;
+          background: linear-gradient(265.23deg, #237249 6.79%, #35c66b 97.2%);
+          color: white;
+          border: none;
+        }
+      }
+    }
+  }
+}

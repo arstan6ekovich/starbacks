@@ -1,10 +1,10 @@
-import scss from "./Welcome.module.scss";
-import coffeImg from "../../../assets/image/coffeImg.png";
-import sale from "../../../assets/image/sale.svg";
-import shadowWhite from "../../../assets/image/shadowWhite.png";
-import shadowGreen2 from "../../../assets/image/shadowGreen2.png";
-import shadowGreen from "../../../assets/image/shadowGreen.png";
 import Image from "next/image";
+import scss from "./Welcome.module.scss";
+import welcome from "@/assets/image/welcome.svg";
+import img1 from "@/assets/image/img1.svg";
+import img2 from "@/assets/image/img2.svg";
+import img3 from "@/assets/image/img3.svg";
+import block_img from "@/assets/image/block-img.svg";
 
 const Welcome = () => {
   return (
@@ -12,18 +12,16 @@ const Welcome = () => {
       <div className="container">
         <div className={scss.content}>
           <div className={scss.welcomeText}>
-            <Image alt="" src={shadowGreen} />
-
             <h1>
-              New Cafe by <span> StarBucks </span>
+              New Cafe <br /> by <span> StarBucks </span>
             </h1>
             <p>
-              Have time to buy the most harmonious drinks in the new Starbucks
-              coffee and don't forget about the discount!
+              Have time to buy the most harmonious drinks in the <br /> new
+              Starbucks coffee and don't forget about the discount!
             </p>
             <div className={scss.welcomeTextButton}>
-              <button>Select a coffee </button>
-              <button>More</button>
+              <button className={scss.green}>Select a coffee </button>
+              <button className={scss.black}>More</button>
             </div>
             <div className={scss.welcomeTextUsers}>
               <div className={scss.welcomeTextUsersPremium}>
@@ -53,13 +51,38 @@ const Welcome = () => {
             </div>
           </div>
           <div className={scss.welcomeImage}>
-            <Image alt="" src={coffeImg} />
-            <div className={scss.welcomeImageSale}></div>
-            <Image alt="" src={sale} />
-            <h2>45%</h2>
+            <Image width={400} src={welcome} alt="image" />
           </div>
-          <Image alt="" src={shadowGreen} />
-          <Image alt="" src={shadowGreen2} />
+        </div>
+        <div className={scss.blocks}>
+          <Image className={scss.block_image} src={block_img} alt="img" />
+          <div className={scss.block}>
+            <div className={scss.block_img}>
+              <Image src={img1} alt="img" />
+            </div>
+            <h2>Tasty</h2>
+            <h4>
+              We have the most <br /> delicious coffee
+            </h4>
+          </div>
+          <div className={scss.block}>
+            <div className={scss.block_img}>
+              <Image src={img2} alt="img" />
+            </div>{" "}
+            <h2>Fast</h2>
+            <h4>
+              Our cafe will serve <br /> you quickly
+            </h4>
+          </div>
+          <div className={scss.block}>
+            <div className={scss.block_img}>
+              <Image src={img3} alt="img" />
+            </div>{" "}
+            <h2>Available</h2>
+            <h4>
+              Cafe will serveat the <br /> most pleasant prices
+            </h4>
+          </div>
         </div>
       </div>
     </section>
